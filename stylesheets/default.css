@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Open sans', Lato, san-serif;
+}
+
+div#background-hero img {
+  width: 100%;
+}
+
+div#menu {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  padding: 1em;
+  
+}
+
+div#main-text-area{
+  background-color: #ffffff;
+  position: fixed;
+  top: 0px;
+  width: 50%;
+  height: 96%;
+  margin: 1em; 
+  opacity: 0.9;
+}
+
+div#logo {
+  top: 0px;
+  padding:1em;
+}
+
+div#links {
+  margin-top: 10em;
+  padding-left: 1em;
+  float: left;
+}
+
+div#social {
+  padding: 1em;
+  position: fixed;
+  bottom: 10em;
+}
+
+div#index-post {
+  position: relative;
+  float: right;
+  margin-top: 5em;
+  width: 50%;
+  height: 83%;
+  padding-right: 3em;
+  overflow: scroll;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+h4 {
+  font-weight: 300;
+  margin: 0;
+}
+
+p#date {
+  color: #444444;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: .8em;
+}
+
+a {
+  text-decoration: none;
+  color: #D1522E
+}
