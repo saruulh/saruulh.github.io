@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Saruul Herz - Technical Blog</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="http://saruulh.github.io/stylesheets/blog-stylesheet.css">
+    <link rel="stylesheet" href="http://saruulh.github.io/font-awesome-4.3.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="menu"></div>
+      <div id="main-text-area">
+        <div id="logo"></div>
+        <div id="links">
+          <ul>
+            <li><a href="http://saruulh.github.io/">Home</a></li>
+            <li><a href="http://saruulh.github.io/about.html">About</a></li>
+            <li><a href="http://saruulh.github.io/projects.html">Projects</a></li>
+            <li><a href="http://saruulh.github.io/blog/technical-blog.html">Technical Blog</a></li>
+            <li><a href="http://saruulh.github.io/blog/cultural-blog.html">Cultural Blog</a></li>
+          </ul>
+        </div>
+        <div id="index-post">
+          <section>
+            <h2>Technical Blog: Comparing Arrays and Hashes in Ruby</h2>
+            <p id="date">March 15, 2015</p>
+              <p>
+                An array is a numbered collection of objects. They are useful when storing numbers, strings, other arrays, hashes, and classes. To store values, you can simply use square brackets, []. I find it useful because it allows you to select an object based on a consistent, consecutive numerical index. There are multiple ways to create arrays, such as Array.new, .to_a, or by using a simple [].
+              </p>
+              <p>
+                Arrays have their own methods to manipulate their values. For example: `.push, .pop, .first, .last, .at` etc. To access a value in an array, you can state the number index where its ordered, BUT the numbers must start from zero. Here is an example of an array:
+
+                <code>
+                array = [1, 2, 3, 4, 5] #if I wanted to find the value of 1, I would use,
+                array.at(0) #and this would return 1, 
+                => 1
+                </code>
+              </p>
+              <p>
+                In addition, you can have arrays within an array. For example;
+
+                <code>
+                 array_1 = [1, 2, 3, 4, 5, [2, 6, 7, 3, 5]]
+                 array_2 = [[1, 2, 3, 4, 5], [2, 6, 7, 3, 5]]
+                </code>
+
+                Also, you can merge them into one array by using the array method of .flatten. For example; 
+
+                <code>
+                 array_1 = [1, 2, 3, 4, 5, [2, 6, 7, 3, 5]].flatten 
+                 => [1, 2, 3, 4, 5, 2, 6, 7, 3, 5]
+                </code>
+
+                You can find out how many values an array has stored in it by using .length. For example;
+
+                <code> 
+                array = [1, 2, 3, 4, 5].length 
+                => 5
+                </code>
+
+                You can pull an unique value by using .uniq or you can join them together by using join.
+
+                <code> 
+                array = [1, 1, 2, 3, 3, 4, 4, 4, 5, 5].uniq 
+                => 2
+                </code>
+
+                <code> 
+                array = [1, 2, 3, 4, 5].join
+                => 12345
+                </code>
+              </p>
+              <p>
+                Hash is an unordered collection of objects that pairs objects by a key and a value. It's similar to an array, but instead of numbered indexes, a hash stores values by unique keys. For example:
+
+                <code>
+                {key: value}
+                </code>
+
+                Hashes are useful when storing objects like numbers, strings, arrays, classes, etc. To store a value you need to use curly brackets {}. You can also select an object based on the given key it was stored under. For example:
+
+                <code>
+                  fruit_colors = {apple: red, banana: yellow, kiwi: green}
+                  print fruit_colors(apple)
+                  => red
+                </code>
+              </p>
+              <p>
+                You can create a hash with Hash.new, #to_hash or with simple {}. Hashes have their own methods to manipulate their values (like, .delete, .freeze, .fetch, etc.). You can also merge multiple hashes into one hash by using hash method .merge. For example;
+
+                <code>
+                  x1 = { "a" => 100, "b" => 200 }
+                  x2 = { "b" => 254, "c" => 300 }
+                  x1.merge(x2)   returns  {"a"=>100, "b"=>254, c"=>300}
+                </code>
+              </p>
+              <p>
+                You can find out how many values a given hash is storing by stating .length. For example:
+
+                <code>
+                  x1 = { "a" => 100, "b" => 200 }.length
+                  => 2
+                </code>
+              </p>
+          </section>
+        </div>
+        <div id="social">
+          <div class="fa-stack">
+            <a href="https://github.com/saruulh/" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
+            <a href="https://twitter.com/rulacoda" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+            <a href="https://plus.google.com/u/0/+SaruulHerz/posts" target="_blank"><i class="fa fa-google-plus fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/saruulherz/en" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="mailto:saruulh@gmail.com?Subject=Hello" target="_top"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
