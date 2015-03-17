@@ -4,37 +4,118 @@
   <head>
     <title>Saruul Herz - Blog</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <div id="background-hero"><img src="blog-images/start-sign.jpg" alt="start"/></div>
     <div class="menu"></div>
-    <div id="overlay">
-      <div id="main-text-area">
-        <div id="logo"></div>
-        <div id="links">
-          <ul>
-            <li><a href="http://saruulh.github.io/">Home</a></li>
-            <li><a href="http://saruulh.github.io/about.html">About</a></li>
-            <li><a href="http://saruulh.github.io/projects.html">Projects</a></li>
-            <li><a href="http://saruulh.github.io/blog/technical-blog.html">Technical Blog</a></li>
-            <li><a href="http://saruulh.github.io/blog/cultural-blog.html">Cultural Blog</a></li>
-          </ul>
-        </div>
+      <div id="overlay">
+        <div id="main-text-area">
+          <div id="logo"><img src="../blog-images/Saruul-Herz.jpg" alt="start"/></div>
+          <div id="nav-links">
+            <ul class="nav-sub">
+              <li><a href="http://saruulh.github.io/">Home</a></li>
+              <li><a href="http://saruulh.github.io/about.html">About</a></li>
+              <li><a href="http://saruulh.github.io/projects.html">Projects</a></li>
+              <li><a href="#">Technical Blog</a></li>
+                <ul>
+                  <li><a href="http://saruulh.github.io/blog/t3-arrays-hashes.html">Arrays & Hashes</a></li>
+                  <li><a href="http://saruulh.github.io/blog/t2-css-design.html">CSS Best Practices </a></li>
+                  <li><a href="http://saruulh.github.io/blog/t1-git-blog.html">Git Blog</a></li>
+                </ul>
+              <li><a href="#">Cultural Blog</a></li>
+                <ul>
+                  <li><a href="http://saruulh.github.io/blog/c3_thinking-style.html">My Thinking Style</a></li>
+                  <li><a href="http://saruulh.github.io/blog/c1-chefs-kitchen.html">Chefs In The Kitchen</a></li>
+                </ul>
+            </ul>
+          </div>
         <div id="index-post">
           <section>
-            <h2>My first blog</h2>
-            <p id="date">March 1, 2015</p>
-              <p>
-                As a beginner, joining and going through Dev Bootcamp's first week was, well, like a "bootcamp". I learned so much this week than I ever did. I got to learn the whole ecosystem of development and how each component is a vital part of the whole. I had a very limited idea of Git and Github (yes they are two different things) but now I know Git is a software that you can install on your computer locally which controls and manages your file versions (version control system). Simply put, it saves and keeps snapshots of your file changes in your computer. Github is a remote centralized hub where all files saved, organized and merged without conflicting, deleting or overwriting your files. Sound neat? So, this is an important place to collaborate and work on a same project with project team members. You can do whole lot of things here and it seems pretty deep, but this is a good place to start. The benefits of version control are tremendous, let's say you spent hours writing code and you accidentally deleted few lines, you can revert back to your earlier state with version control and recover.
+            <h2>Technical Blog: Comparing Arrays and Hashes in Ruby</h2>
+            <p id="date">March 15, 2015</p>
+            <p>
+                An array is a numbered collection of objects. They are useful when storing numbers, strings, other arrays, hashes, and classes. To store values, you can simply use square brackets, []. I find it useful because it allows you to select an object based on a consistent, consecutive numerical index. There are multiple ways to create arrays, such as Array.new, .to_a, or by using a simple [].
               </p>
               <p>
-                Git keeps an eye on files you are changing and let's you know what files are changed by explicit commands, e.g. git status will show you which file is changed. It also shows you instructions what to do next. Your next thing would be to stage your changed files to be commited. You will be able to stage your files by git add file_name. Once added om the stage, you will be able to fully commit your files. Committing is like a saving or recording point for your file changes. Once you committd, now it ready to be pushed to the hub. You do this by typing git push origin master.
+                Arrays have their own methods to manipulate their values. For example: `.push, .pop, .first, .last, .at` etc. To access a value in an array, you can state the number index where its ordered, BUT the numbers must start from zero. Here is an example of an array:<br>
+
+                <code class="ruby"><br><b>
+                array = [1, 2, 3, 4, 5] #if I wanted to find the value of 1, I would use,<br>
+                array.at(0) #and this would return 1, <br>
+                => 1<b>
+                </code><br>
               </p>
               <p>
-                GitHub on the other hand, is a hub where you upload your committed file (like we did by git push...) so that everyone else can view, edit, share and have a discussion on the file that you saved. Hope it was helpful.
+                In addition, you can have arrays within an array. For example:<br>
+
+                <code class="ruby"><br><b>
+                 array_1 = [1, 2, 3, 4, 5, [2, 6, 7, 3, 5]]<br>
+                 array_2 = [[1, 2, 3, 4, 5], [2, 6, 7, 3, 5]]<b>
+                </code><br>
+              <p>
+                Also, you can merge them into one array by using the array method of .flatten. For example: <br>
+
+                <code class="ruby"><br><b>
+                 array_1 = [1, 2, 3, 4, 5, [2, 6, 7, 3, 5]].flatten <br>
+                 => [1, 2, 3, 4, 5, 2, 6, 7, 3, 5]<b>
+                </code><br>
+              </p>
+              <p>
+                You can find out how many values an array has stored in it by using .length. For example:<br>
+
+                <code class="ruby"><br><b>
+                array = [1, 2, 3, 4, 5].length <br>
+                => 5<b>
+                </code><br>
+              </p>
+              <p>
+                You can pull an unique value by using .uniq or you can join them together by using join.<br>
+
+                <code class="ruby"><br><b>
+                array = [1, 1, 2, 3, 3, 4, 4, 4, 5, 5].uniq <br>
+                => 2<b>
+                </code><br>
+
+                <code class="ruby"><br><b>
+                array = [1, 2, 3, 4, 5].join<br>
+                => 12345<b>
+                </code><br>
+              </p>
+              <p>
+                Hash is an unordered collection of objects that pairs objects by a key and a value. It's similar to an array, but instead of numbered indexes, a hash stores values by unique keys. For example:<br>
+
+                <code class="ruby"><br><b>
+                {key: value}<b>
+                </code><br>
+              </p>
+              <p>
+                Hashes are useful when storing objects like numbers, strings, arrays, classes, etc. To store a value you need to use curly brackets {}. You can also select an object based on the given key it was stored under. For example:<br>
+
+                <code class="ruby"><br><b>
+                  fruit_colors = {apple: red, banana: yellow, kiwi: green}<br>
+                  print fruit_colors(apple)<br>
+                  => red<b>
+                </code><br>
+              </p>
+              <p>
+                You can create a hash with Hash.new, #to_hash or with simple {}. Hashes have their own methods to manipulate their values (like, .delete, .freeze, .fetch, etc.). You can also merge multiple hashes into one hash by using hash method .merge. For example:<br>
+
+                <code class="ruby"><br><b>
+                  x1 = { "a" => 100, "b" => 200 }<br>
+                  x2 = { "b" => 254, "c" => 300 }<br>
+                  x1.merge(x2)   returns  {"a"=>100, "b"=>254, c"=>300}<b>
+                </code><br>
+              </p>
+              <p>
+                You can find out how many values a given hash is storing by stating .length. For example:<br>
+
+                <code class="ruby"><br><b>
+                  x1 = { "a" => 100, "b" => 200 }.length<br>
+                  => 2<b>
+                </code><br>
               </p>
           </section>
         </div>
@@ -47,8 +128,10 @@
             <a href="mailto:saruulh@gmail.com?Subject=Hello" target="_top"><i class="fa fa-envelope"></i></a>
           </div>
         </div>
+        <div id="footer">
+          <p>Saruul Herz © 2015</p>
+        </div>
       </div>
     </div>
   </body>
-
 </html>

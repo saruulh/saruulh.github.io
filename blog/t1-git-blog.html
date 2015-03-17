@@ -1,34 +1,65 @@
 <!DOCTYPE html>
-<head>
-  <title>My Technical Blog</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
-</head>
+<html lang="en">
 
-<main>
-  <h1>My first week at Dev Bootcamp, Phase 0</h1>
-  <h2>Technical Blog.</h2>
-  <h4>March 1, 2015</h4>
+  <head>
+    <title>Saruul Herz - Blog</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
 
-  <section>
-    <p>
-      As a beginner, joining and going through Dev Bootcamp's first week was, well, like a "bootcamp". I learned so much this week than I ever did. I got to learn the whole ecosystem of development and how each component is a vital part of the whole. I had a very limited idea of Git and Github (yes they are two different things) but now I know Git is a software that you can install on your computer locally which controls and manages your file versions (version control system). Simply put, it saves and keeps snapshots of your file changes in your computer.
-
-      Github is a remote centralized hub where all files saved, organized and merged without conflicting, deleting or overwriting your files. Sound neat? So, this is an important place to collaborate and work on a same project with project team members. You can do whole lot of things here and it seems pretty deep, but this is a good place to start.
-
-      The benefits of version control are tremendous, let's say you spent hours writing code and you accidentally deleted few lines, you can revert back to your earlier state with version control and recover.
-    </p>
-    <p>
-        Git keeps an eye on files you are changing and let's you know what files are changed by explicit commands, e.g. git status will show you which file is changed. It also shows you instructions what to do next.
-
-        Your next thing would be to stage your changed files to be commited. You will be able to stage your files by git add file_name. Once added om the stage, you will be able to fully commit your files. Committing is like a saving or recording point for your file changes.
-
-        Once you committd, now it ready to be pushed to the hub. You do this by typing git push origin master.
-    </p>
-    <p>
-        GitHub on the other hand, is a hub where you upload your committed file (like we did by git push...) so that everyone else can view, edit, share and have a discussion on the file that you saved.
-
-        Hope it was helpful.
-    </p>
-  </section>
-</main>
+  <body>
+    <div class="menu"></div>
+      <div id="overlay">
+        <div id="main-text-area">
+          <div id="logo"><img src="../blog-images/Saruul-Herz.jpg" alt="start"/></div>
+          <div id="nav-links">
+            <ul class="nav-sub">
+              <li><a href="http://saruulh.github.io/">Home</a></li>
+              <li><a href="http://saruulh.github.io/about.html">About</a></li>
+              <li><a href="http://saruulh.github.io/projects.html">Projects</a></li>
+              <li><a href="#">Technical Blog</a></li>
+                <ul>
+                  <li><a href="http://saruulh.github.io/blog/t3-arrays-hashes.html">Arrays & Hashes</a></li>
+                  <li><a href="http://saruulh.github.io/blog/t2-css-design.html">CSS Best Practices </a></li>
+                  <li><a href="http://saruulh.github.io/blog/t1-git-blog.html">Git Blog</a></li>
+                </ul>
+              <li><a href="#">Cultural Blog</a></li>
+                <ul>
+                  <li><a href="http://saruulh.github.io/blog/c3_thinking-style.html">My Thinking Style</a></li>
+                  <li><a href="http://saruulh.github.io/blog/c1-chefs-kitchen.html">Chefs In The Kitchen</a></li>
+                </ul>
+            </ul>
+          </div>
+        <div id="index-post">
+          <section>
+            <h2>Technical Blog: Git Blog</h2>
+            <p id="date">March 1, 2015</p>
+            <p>
+              As a beginner, joining and going through Dev Bootcamp's first week was, well, like a "bootcamp". I learned so much this week than I ever did. I got to learn the whole ecosystem of development and how each component is a vital part of the whole. I had a very limited idea of Git and Github (yes they are two different things) but now I know Git is a software that you can install on your computer locally which controls and manages your file versions (version control system). Simply put, it saves and keeps snapshots of your file changes in your computer. Github is a remote centralized hub where all files saved, organized and merged without conflicting, deleting or overwriting your files. Sound neat? So, this is an important place to collaborate and work on a same project with project team members. You can do whole lot of things here and it seems pretty deep, but this is a good place to start. The benefits of version control are tremendous, let's say you spent hours writing code and you accidentally deleted few lines, you can revert back to your earlier state with version control and recover.
+            </p>
+            <p>
+              Git keeps an eye on files you are changing and let's you know what files are changed by explicit commands, e.g. git status will show you which file is changed. It also shows you instructions what to do next. Your next thing would be to stage your changed files to be commited. You will be able to stage your files by git add file_name. Once added om the stage, you will be able to fully commit your files. Committing is like a saving or recording point for your file changes. Once you committd, now it ready to be pushed to the hub. You do this by typing git push origin master.
+            </p>
+            <p>
+              GitHub on the other hand, is a hub where you upload your committed file (like we did by git push...) so that everyone else can view, edit, share and have a discussion on the file that you saved. Hope it was helpful.
+            </p>
+          </section>
+        </div>
+        <div id="social">
+          <div class="fa-stack">
+            <a href="https://github.com/saruulh/" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
+            <a href="https://twitter.com/rulacoda" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+            <a href="https://plus.google.com/u/0/+SaruulHerz/posts" target="_blank"><i class="fa fa-google-plus fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/saruulherz/en" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="mailto:saruulh@gmail.com?Subject=Hello" target="_top"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+        <div id="footer">
+          <p>Saruul Herz © 2015</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

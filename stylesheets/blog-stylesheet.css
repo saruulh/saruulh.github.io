@@ -3,42 +3,70 @@ body {
   font-family: 'Open sans', Lato, san-serif;
 }
 
+div#menu {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  padding: 1em;
+}
+
+ul li a:hover{
+    color: #444444;
+}
+
+ul.nav-sub ul li a {
+      padding-left: 2em;
+}
+
+#footer {
+  bottom: 0px;
+  padding-left: 2em;
+  position: fixed;
+}
+
 div#main-text-area{
   background-color: #ffffff;
-  position: fixed;
+  position: absolute;
   top: 0px;
-  width: 98%;
-  height: 96%;
-  margin: 1em;
-  /* opacity: 0.9; */
+  width: 90%;
+  margin-left: 1em; 
+  opacity: 0.9;
 }
 
-div#logo {
+div#logo img{
   top: 0px;
   padding:1em;
+  width: 8em;
+  border-radius: 5em;
+  position: fixed;
+
 }
 
-div#links {
+div#nav-links {
   margin-top: 10em;
-  padding-left: 1em;
+  padding-left: 2em;
+  position: fixed;
   float: left;
 }
 
 div#social {
-  padding: 1em;
+  padding: 2em;
   position: fixed;
-  bottom: 2em;
-  height: 10em;
+  bottom: 10em;
+}
+
+div#social a:hover{
+    color: #444444;
 }
 
 div#index-post {
   position: relative;
   float: right;
   margin-top: 5em;
-  width: 57%;
-  height: 83%;
-  padding-right: 18em;
-  overflow: scroll;
+  width: 70%;
+  height: 80%;
+  padding-right: 3em;
+
 }
 
 h2 {
