@@ -36,25 +36,65 @@
           </div>
         <div id="index-post">
           <section>
-            <h2>Technical Blog: CSS Best Practices of Ids and Classes</h2>
-            <p id="date">March 8, 2015</p>
-              <p>
-                In a nutshell CSS defines how HTML elements are displayed in a browser. You do this by declaring a property and value for a selector (an HTML element). Basic syntax of a selector with property and value looks as follows: selector {property: value;}. We use classes and ids to manipulate and generalize certain styles of that element.
+            <h2>Technical Blog: Enumerable Method #map</h2>
+            <p id="date">March 22, 2015</p>
+            <p>
+                Enumerables are modules, which contain methods that are packaged together to work with other classes as long as the class that's using the enumerable has its own #each method. In other words, #each method works as a connector between the module and class so that class can access to those module methods. 
               </p>
               <p>
-                ID selectors are used only when you specify a unique element to behave certain way. This is usually done in a single instance. For example, if you specifying a specific paragraph to look one certain way, you'd give that paragraph a specific ID. To select a specific element, we use hash (#) character followed with that ID name.
+                Enumerable enables us to go through every element in a collection object, like an array or a hash.
               </p>
               <p>
-                For example, <code>#main-red {text-color: red;}</code>
+                In this case we can use #map method (alias of #collect) to go through each element. Let's look at an array for an example:<br>
+
+                <code class="ruby"><br><b>
+                ["blue", "red", "purple", "yellow"].map { |x| p "#{x} color"}<br>
+                => <br>
+                "blue color"<br>
+                "red color"<br>
+                "purple color"<br>
+                "yellow color" <br>
+                => ["blue color", "red color", "purple color", "yellow color"]<b>
+                </code><br>
+                &nbsp;
+                <code class="ruby"><br><b>
+                ["blue", "red", "purple", "yellow"].map { |x| p "#{x} color.".capitalize }<br>
+                => <br>
+                "Blue color."<br>
+                "Red color."<br>
+                "Purple color."<br>
+                "Yellow color."<br>
+                => ["Blue color.", "Red color.", "Purple color.", "Yellow color."]<b>
+                </code><br>
               </p>
               <p>
-                Class selectors, on the other hand, can select a class/group of elements. To have many different elements to behave one certain way, you'd specify a class by using period character (.) followed by that class name.
+                As you can see, #map always returns an array (a new object) with an accumulated result of a given code block in the same size as the original enumerable. 
               </p>
               <p>
-                For example, <code>.blog-posts {font-family: Arial;}</code>
+                But what if we used #puts in the code block in the above example, like so:<br>
+
+                <code class="ruby"><br><b>
+                ["blue", "red", "purple", "yellow"].map { |x| puts "#{x} color"}<br>
+                => <br>
+                blue color<br>
+                red color<br>
+                purple color<br>
+                yellow color<br>
+                => [nil, nil, nil, nil]<b>
+                </code><br>
+                &nbsp;
+                <code class="ruby"><br><b>
+                ["blue", "red", "purple", "yellow"].map { |x| puts "#{x} color.".capitalize }<br>
+                => <br>
+                Blue color.<br>
+                Red color.<br>
+                Purple color.<br>
+                Yellow color.<br>
+                => [nil, nil, nil, nil]<b>
+                </code><br>
               </p>
               <p>
-                Furthermore, naming these selectors functionally is extremely helpful moving forward, especially when you're working on content heavy big projects. This is where the artistry of code comes in. It’s a chance to make things more elegant and efficient. Also, it helps to load these codes faster.
+                The #puts method returns nil in this case, because the return value of puts is always nil, so keep that in mind! 
               </p>
           </section>
         </div>
