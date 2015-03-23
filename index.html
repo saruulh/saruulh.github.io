@@ -36,88 +36,31 @@
           </div>
         <div id="index-post">
           <section>
-            <h2>Technical Blog: Comparing Arrays and Hashes in Ruby</h2>
-            <p id="date">March 15, 2015</p>
+            <h2>Cultural Blog: Issues in Tech</h2>
+            <p id="date">March 22, 2015</p>
             <p>
-                An array is a numbered collection of objects. They are useful when storing numbers, strings, other arrays, hashes, and classes. To store values, you can simply use square brackets, []. I find it useful because it allows you to select an object based on a consistent, consecutive numerical index. There are multiple ways to create arrays, such as Array.new, .to_a, or by using a simple [].
+                In a world where personal information is so easily obtained, the question facing so many people is:
               </p>
               <p>
-                Arrays have their own methods to manipulate their values. For example: `.push, .pop, .first, .last, .at` etc. To access a value in an array, you can state the number index where its ordered, BUT the numbers must start from zero. Here is an example of an array:<br>
-
-                <code class="ruby"><br><b>
-                array = [1, 2, 3, 4, 5] #if I wanted to find the value of 1, I would use,<br>
-                array.at(0) #and this would return 1, <br>
-                => 1<b>
-                </code><br>
+                How do I keep what I don’t want known, private?
               </p>
               <p>
-                In addition, you can have arrays within an array. For example:<br>
-
-                <code class="ruby"><br><b>
-                 array_1 = [1, 2, 3, 4, 5, [2, 6, 7, 3, 5]]<br>
-                 array_2 = [[1, 2, 3, 4, 5], [2, 6, 7, 3, 5]]<b>
-                </code><br>
-              <p>
-                Also, you can merge them into one array by using the array method of .flatten. For example: <br>
-
-                <code class="ruby"><br><b>
-                 array_1 = [1, 2, 3, 4, 5, [2, 6, 7, 3, 5]].flatten <br>
-                 => [1, 2, 3, 4, 5, 2, 6, 7, 3, 5]<b>
-                </code><br>
+                On this Friday’s Shark Tank, a young entrepreneur brought out an idea where people would have an easy time making sure their personal information didn’t come up in Google searches.
               </p>
               <p>
-                You can find out how many values an array has stored in it by using .length. For example:<br>
-
-                <code class="ruby"><br><b>
-                array = [1, 2, 3, 4, 5].length <br>
-                => 5<b>
-                </code><br>
+                Later that evening, my husband and I were talking over dinner about a woman in his office who uses the dating app Tinder. After she looked at her potential dates for the evening, she started doing research about them. In a few minutes, just from checking their facebook and LinkedIn profiles, she knew where they worked, what they liked, and was able to look through past photos and experiences without any barriers. 
               </p>
               <p>
-                You can pull an unique value by using .uniq or you can join them together by using join.<br>
-
-                <code class="ruby"><br><b>
-                array = [1, 1, 2, 3, 3, 4, 4, 4, 5, 5].uniq <br>
-                => 2<b>
-                </code><br>
-
-                <code class="ruby"><br><b>
-                array = [1, 2, 3, 4, 5].join<br>
-                => 12345<b>
-                </code><br>
+                It got me thinking that in a world where everything is so available, how can individuals truly have any privacy at all? Major corporations invest millions of dollars each year protecting information that is vital to their operations, but what about the average person who has little to no disposable income to invest in security?
               </p>
               <p>
-                Hash is an unordered collection of objects that pairs objects by a key and a value. It's similar to an array, but instead of numbered indexes, a hash stores values by unique keys. For example:<br>
-
-                <code class="ruby"><br><b>
-                {key: value}<b>
-                </code><br>
+                Is all of their information up for grabs because they don’t have the means to build a proper firewall around it?
               </p>
               <p>
-                Hashes are useful when storing objects like numbers, strings, arrays, classes, etc. To store a value you need to use curly brackets {}. You can also select an object based on the given key it was stored under. For example:<br>
-
-                <code class="ruby"><br><b>
-                  fruit_colors = {apple: red, banana: yellow, kiwi: green}<br>
-                  print fruit_colors(apple)<br>
-                  => red<b>
-                </code><br>
+                I believe that in the future, people will not be so free to share information and that, soon, social media platforms will start building private communities where people will only show information to those they wish to see it.
               </p>
               <p>
-                You can create a hash with Hash.new, #to_hash or with simple {}. Hashes have their own methods to manipulate their values (like, .delete, .freeze, .fetch, etc.). You can also merge multiple hashes into one hash by using hash method .merge. For example:<br>
-
-                <code class="ruby"><br><b>
-                  x1 = { "a" => 100, "b" => 200 }<br>
-                  x2 = { "b" => 254, "c" => 300 }<br>
-                  x1.merge(x2)   returns  {"a"=>100, "b"=>254, c"=>300}<b>
-                </code><br>
-              </p>
-              <p>
-                You can find out how many values a given hash is storing by stating .length. For example:<br>
-
-                <code class="ruby"><br><b>
-                  x1 = { "a" => 100, "b" => 200 }.length<br>
-                  => 2<b>
-                </code><br>
+                Protecting information will soon be the number one-ask of any consumer that puts their lives online.
               </p>
           </section>
         </div>
