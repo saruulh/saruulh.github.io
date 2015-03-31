@@ -40,8 +40,51 @@
           <section>
             <h2>Technical Blog: Ruby Classes</h2>
             <p id="date">March 29, 2015</p>
-            <p>
-                Stay tuned.
+              <p>
+                <b>Classes</b> are collection of variables and methods that behave certain way. It’s a way to collect and hold bunch of different methods and variables in one place and essentially produce a result under a common goal.
+              </p>
+              <p>
+                You can declare a class by <code class="ruby"><b>class</b></code> keyword with any name you choose as long as it starts with capital letter or camel case (CamelCase) for two word names. Classes ends with <code class="ruby"><b>end</b></code> keyword.
+              </p>
+              <code class="ruby"><b>
+                class CalculateSqft<br>
+                end
+                </b></code><br>
+              <p>
+                Declaring methods within the class are the same way we create regular methods by defining a method <code class="ruby"><b>def</b></code> keyword, name and an <code class="ruby"><b>end</b></code> keyword. Methods that are inside a class is an instance methods and can be accessed or shared by any other instances of the class. 
+              </p>
+              <code class="ruby"><b>
+                class CalculateSqft<br>
+                  &nbsp;def area<br>
+                    &nbsp;&nbsp;width * height<br>
+                  &nbsp;end<br>
+                end<br>
+                </b></code>
+              <p>
+                But above method called <code class="ruby"><b>area</b></code> that calculates width and height needs to store that calculation value somewhere. That’s when instance variable comes in. Instance variables always starts with <code class="ruby"><b>@</b></code> sign and it can be shared with other methods within that same class. 
+              </p>
+              <code class="ruby"><b>
+                class CalculateSqft<br>
+                  &nbsp;def area<br>
+                    &nbsp;&nbsp;@sqft = width * height<br>
+                  &nbsp;end<br>
+                end<br>
+                </b></code>
+              <p>
+                If you so desire, you can have a special method called <code class="ruby"><b>initialize</b></code> that executes every time a new class instance is created. For example, let’s print a message every time a new <code class="ruby"><b>CalculateSqft</b></code> object is created.
+              </p>
+              <code class="ruby"><b>
+                class CalculateSqft<br>
+                  &nbsp;def initialize<br>
+                    &nbsp;&nbsp;puts “Hey, what’s your width and height?”<br>
+                  &nbsp;end<br>
+                  &nbsp;def area<br>
+                    &nbsp;&nbsp;@sqft = width * height<br>
+                  &nbsp;end<br>
+                end<br>
+                </b></code>
+                <p>
+                To be continued... Stay tuned.
               </p>
           </section>
         </div>
