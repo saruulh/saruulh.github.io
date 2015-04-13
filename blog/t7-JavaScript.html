@@ -31,6 +31,7 @@
                 </ul>
               <li><a href="#">Cultural Blog</a></li>
                 <ul>
+                  <li><a href="http://saruulh.github.io/blog/c7-values.html">Values</a></li>
                   <li><a href="http://saruulh.github.io/blog/c6-stereotype-threat.html">Stereotype Threat</a></li>
                   <li><a href="http://saruulh.github.io/blog/c5-feedback.html">Pairing and Giving Feedback</a></li>
                   <li><a href="http://saruulh.github.io/blog/c4-tech-issues.html">Issues in Tech</a></li>
@@ -41,53 +42,33 @@
           </div>
         <div id="index-post">
           <section>
-            <h2>Technical Blog: Ruby Classes</h2>
-            <p id="date">March 29, 2015</p>
+            <h2>Technical Blog: Ruby Doc vs JavaScript Doc</h2>
+            <p id="date">April 12, 2015</p>
               <p>
-                <b>Classes</b> are collection of variables and methods that behave certain way. It’s a way to collect and hold bunch of different methods and variables in one place and essentially produce a result under a common goal.
+                Both the Ruby and JavaScript doc are very dense and difficult to understand for a first time learner. However, as you go along and find things, you start to discover some solid ground.
+              </p>
+              <h3>Ruby Doc</h3>
+              <p>
+                The Ruby Doc was not like reading a book or magazine, it was a highly technical and dense document that was very intimidating. One of the hardest parts was getting over this. I would assume it's much like reading Shakespeare. The language is tough as first, but after a while, you start to figure out what world you are in. 
               </p>
               <p>
-                You can declare a class by <code class="ruby"><b>class</b></code> keyword with any name you choose as long as it starts with capital letter or camel case (CamelCase) for two word names. Classes ends with <code class="ruby"><b>end</b></code> keyword.
+                What I found helpful was to make sure what version you're working with. When you are working with the latest version of Ruby, some of methods in the earlier versions of Ruby don't apply. When you search what you're looking for, you should start with the summary of its description followed by some examples. This helped me get my eyes used to the syntax examples that are given.
               </p>
-              <code class="ruby"><b>
-                class CalculateSqft<br>
-                end
-                </b></code><br>
               <p>
-                Declaring methods within the class are the same way we create regular methods by defining a method <code class="ruby"><b>def</b></code> keyword, name and an <code class="ruby"><b>end</b></code> keyword. Methods that are inside a class is an instance methods and can be accessed or shared by any other instances of the class. 
+                I would highly recommend reading Maria Piper's blog post on how to read a Ruby Document and utilize it efficiently. You can find her post [*here*](http://mariabpiper.tumblr.com/post/116045895341/ruby-docs-for-newbs). 
               </p>
-              <code class="ruby"><b>
-                class CalculateSqft<br>
-                  &nbsp;def area<br>
-                    &nbsp;&nbsp;width * height<br>
-                  &nbsp;end<br>
-                end<br>
-                </b></code>
               <p>
-                But above method called <code class="ruby"><b>area</b></code> that calculates width and height needs to store that calculation value somewhere. That’s when instance variable comes in. Instance variables always starts with <code class="ruby"><b>@</b></code> sign and it can be shared with other methods within that same class. 
+                Another thing I found helpful is to access Ruby Documentation descriptions with <code class="ruby"><b>ri</b></code> command from your terminal (this is also helpful if you find yourself with no internet connection).
               </p>
-              <code class="ruby"><b>
-                class CalculateSqft<br>
-                  &nbsp;def area<br>
-                    &nbsp;&nbsp;@sqft = width * height<br>
-                  &nbsp;end<br>
-                end<br>
-                </b></code>
+              <h3>Javascript Doc</h3>
               <p>
-                If you so desire, you can have a special method called <code class="ruby"><b>initialize</b></code> that executes every time a new class instance is created. For example, let’s print a message every time a new <code class="ruby"><b>CalculateSqft</b></code> object is created.
+                The Javascript document was a similar experience as far as the density and difficulty in reading the information. It's not, by any means, a casual read. One must be an active reading to fully understand the information. 
               </p>
-              <code class="ruby"><b>
-                class CalculateSqft<br>
-                  &nbsp;def initialize<br>
-                    &nbsp;&nbsp;puts “Hey, what’s your width and height?”<br>
-                  &nbsp;end<br>
-                  &nbsp;def area<br>
-                    &nbsp;&nbsp;@sqft = width * height<br>
-                  &nbsp;end<br>
-                end<br>
-                </b></code>
-                <p>
-                To be continued... Stay tuned.
+              <p>
+                However, I found the examples are easier to understand. Their detailed examples are more descriptive. This allows the reader to actually see what certain methods can do for you. 
+              </p>
+              <p>
+                Since I just was introduced to Javascript this week, I don't have the experience that I have with Ruby, so I can't get deeper into specifics. However, with the greater explanations, I think this is going to be a bit easier on my mind.  
               </p>
           </section>
         </div>
