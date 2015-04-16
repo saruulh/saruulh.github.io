@@ -89,7 +89,7 @@ p {
   font-weight: 400;
 }
 
-p#indent {
+span#indent {
   text-indent: 40px;
 }
 
