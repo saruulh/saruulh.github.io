@@ -89,6 +89,10 @@ p {
   font-weight: 400;
 }
 
+p#indent {
+  text-indent: 40px;
+}
+
 ul {
   list-style: none;
   padding: 0;
