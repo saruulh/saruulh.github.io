@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Saruul Herz - Blog</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" href="../font-awesome-4.3.0/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="menu"></div>
+      <div id="overlay">
+        <div id="main-text-area">
+          <div id="logo"><img src="../blog-images/Saruul-Herz.jpg" alt="start"/></div>
+          <div id="nav-links">
+            <ul class="nav-sub">
+              <li><a href="http://saruulh.github.io/">Home</a></li>
+              <li><a href="http://saruulh.github.io/about.html">About</a></li>
+              <li><a href="http://saruulh.github.io/projects.html">Projects</a></li>
+              <li><a href="http://saruulh.github.io/cheat-sheet.html">Cheat Sheet</a></li>
+              <li><a href="#">Technical Blog</a></li>
+                <ul>
+                  <li><a href="http://saruulh.github.io/blog/t7-JavaScript.html">JS vs Ruby</a></li>
+                  <li><a href="http://saruulh.github.io/blog/t6-oop-concepts.html">Variable Scope</a></li>
+                  <li><a href="http://saruulh.github.io/blog/t5-ruby-classes.html">Ruby Classes</a></li>
+                  <li><a href="http://saruulh.github.io/blog/t4-enumerable-methods.html">Enumerable Method #map</a></li>
+                  <li><a href="http://saruulh.github.io/blog/t3-arrays-hashes.html">Arrays & Hashes</a></li>
+                  <li><a href="http://saruulh.github.io/blog/t2-css-design.html">CSS Best Practices </a></li>
+                  <li><a href="http://saruulh.github.io/blog/t1-git-blog.html">Git Blog</a></li>
+                </ul>
+              <li><a href="#">Cultural Blog</a></li>
+                <ul>
+                  <li><a href="http://saruulh.github.io/blog/c6-stereotype-threat.html">Stereotype Threat</a></li>
+                  <li><a href="http://saruulh.github.io/blog/c5-feedback.html">Pairing and Giving Feedback</a></li>
+                  <li><a href="http://saruulh.github.io/blog/c4-tech-issues.html">Issues in Tech</a></li>
+                  <li><a href="http://saruulh.github.io/blog/c3_thinking-style.html">My Thinking Style</a></li>
+                  <li><a href="http://saruulh.github.io/blog/c1-chefs-kitchen.html">Chefs In The Kitchen</a></li>
+                </ul>
+            </ul>
+          </div>
+        <div id="index-post">
+          <section>
+            <h2>Cheat Sheet: JavaScript Prototypes</h2>
+              <p>
+                Every JavaScript object has a prototype. The prototype is also an object. All JavaScript objects inherit their properties and methods from their prototype.
+              </p>
+              <p>
+                Objects created using an object literal, or with new Object(), inherit from a prototype called Object.prototype. Objects created with new Date() inherit the Date.prototype. The Object.prototype is on the top of the prototype chain. All JavaScript objects (Date, Array, RegExp, Function, ....) inherit from the Object.prototype.
+              </p>
+              <h3>Creating a Prototype</h3>
+              <p>
+                To create an object prototype is to use an object constructor function. For example:
+              </p>
+              <code class="ruby"><b>
+                function person(first, last, age, eyecolor) {<br>
+                    this.firstName = first;
+                    this.lastName = last;<br>
+                    this.age = age;<br>
+                    this.eyeColor = eyecolor;<br>
+                }
+                </b></code>
+              <p>
+                With a constructor function, you can use the <b>new<b> keyword to create new objects from the same prototype:
+              </p>
+              <code class="ruby"><b>
+                var myFather = new person("John", "Doe", 50, "blue");<br>
+                var myMother = new person("Sally", "Rally", 48, "green");<br>
+                </b></code>
+              <h3>Adding a Property to an Object</h3>
+              <code class="ruby"><b>
+                myFather.nationality = "English";<br>
+                </b></code>
+              <h3>Adding a Method to an Object</h3>
+              <code class="ruby"><b>
+                myFather.name = function () {<br>
+                    return this.firstName + " " + this.lastName;<br>
+                };<br>
+                </b></code>
+              <h3>Adding Properties to a Prototype</h3>
+              <p>
+                You <b>cannot</b> add a new property to a prototype the same way as you add a new property to an existing object, because the prototype is not an existing object.
+              </p>
+              <code class="ruby"><b>
+                person.nationality = "English";<br>
+                return "My father is " + myFather.nationality + ".<br>
+                // => My father is undefined
+                </b></code>
+              <p>
+                To add a new property to a constructor, you must add it to the constructor function:
+              </p>
+              <code class="ruby"><b>
+                function person(first, last, age, eyecolor) {<br>
+                    this.firstName = first;<br>
+                    this.lastName = last;<br>
+                    this.age = age;<br>
+                    this.eyeColor = eyecolor;<br>
+                    this.nationality = "English"<br>
+                }<br>
+                return "My father is " + myFather.nationality + ".<br>
+                // => My father is English.<br>
+                </b></code>
+              <h3>Adding Methods to a Prototype</h3>
+              <code class="ruby"><b>
+                function person(first, last, age, eyecolor) {<br>
+                    this.firstName = first;<br>
+                    this.lastName = last;<br>
+                    this.age = age;<br>
+                    this.eyeColor = eyecolor;<br>
+                    this.name = function() {return this.firstName + " " + this.lastName;};<br>
+                }<br>
+                </b></code>
+              <h3>Using the prototype Property</h3>
+              <code class="ruby"><b>
+                function person(first, last, age, eyecolor) {<br>
+                    this.firstName = first;<br>
+                    this.lastName = last;<br>
+                    this.age = age;<br>
+                    this.eyeColor = eyecolor;<br>
+                }<br>
+                person.prototype.nationality = "English";<br>
+                </b></code>
+                <h3>Using the prototype Method</h3>
+              <code class="ruby"><b>
+                function person(first, last, age, eyecolor) {<br>
+                    this.firstName = first;<br>
+                    this.lastName = last;<br>
+                    this.age = age;<br>
+                    this.eyeColor = eyecolor;<br>
+                }<br>
+                person.prototype.name = function() {<br>
+                    return this.firstName + " " + this.lastName;<br>
+                };<br>
+                </b></code>
+          </section>
+        </div>
+        <div id="social">
+          <div class="">
+            <a href="https://github.com/saruulh/" target="_blank"><i class="fa fa-github-alt fa-lg"></i></a>
+            <a href="https://twitter.com/rulacoda" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+            <a href="https://plus.google.com/u/0/+SaruulHerz/posts" target="_blank"><i class="fa fa-google-plus fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/saruulherz/en" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+            <a href="mailto:saruulh@gmail.com?Subject=Hello" target="_top"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+        <div id="footer">
+          <p>Saruul Herz © 2015</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
