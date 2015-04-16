@@ -102,3 +102,8 @@ a {
   text-decoration: none;
   color: #D1522E
 }
+
+pre {
+  background-color: #ffbf80;
+  padding-top: 1em;
+}
