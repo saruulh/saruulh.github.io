@@ -75,62 +75,62 @@
               <h3>Adding a Method to an Object</h3>
               <code class="ruby"><b>
                 myFather.name = function () {<br>
-                    return this.firstName + " " + this.lastName;<br>
+                    &nbsp;&nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
                 };<br>
                 </b></code>
               <h3>Adding Properties to a Prototype</h3>
               <p>
-                You <b>cannot</b> add a new property to a prototype the same way as you add a new property to an existing object, because the prototype is not an existing object.
+                You <strong>>cannot</strong>> add a new property to a prototype the same way as you add a new property to an existing object, because the prototype is not an existing object.
               </p>
               <code class="ruby"><b>
                 person.nationality = "English";<br>
                 return "My father is " + myFather.nationality + ".<br>
-                // => My father is undefined
+                &nbsp;&nbsp;&nbsp;// => My father is undefined
                 </b></code>
               <p>
                 To add a new property to a constructor, you must add it to the constructor function:
               </p>
               <code class="ruby"><b>
                 function person(first, last, age, eyecolor) {<br>
-                    this.firstName = first;<br>
-                    this.lastName = last;<br>
-                    this.age = age;<br>
-                    this.eyeColor = eyecolor;<br>
-                    this.nationality = "English"<br>
+                    &nbsp;&nbsp;&nbsp;this.firstName = first;<br>
+                    &nbsp;&nbsp;&nbsp;this.lastName = last;<br>
+                    &nbsp;&nbsp;&nbsp;this.age = age;<br>
+                    &nbsp;&nbsp;&nbsp;this.eyeColor = eyecolor;<br>
+                    &nbsp;&nbsp;&nbsp;this.nationality = "English"<br>
                 }<br>
                 return "My father is " + myFather.nationality + ".<br>
-                // => My father is English.<br>
+                &nbsp;&nbsp;&nbsp;// => My father is English.<br>
                 </b></code>
               <h3>Adding Methods to a Prototype</h3>
               <code class="ruby"><b>
                 function person(first, last, age, eyecolor) {<br>
-                    this.firstName = first;<br>
-                    this.lastName = last;<br>
-                    this.age = age;<br>
-                    this.eyeColor = eyecolor;<br>
-                    this.name = function() {return this.firstName + " " + this.lastName;};<br>
+                    &nbsp;&nbsp;&nbsp;this.firstName = first;<br>
+                    &nbsp;&nbsp;&nbsp;this.lastName = last;<br>
+                    &nbsp;&nbsp;&nbsp;this.age = age;<br>
+                    &nbsp;&nbsp;&nbsp;this.eyeColor = eyecolor;<br>
+                    &nbsp;&nbsp;&nbsp;this.name = function() {return this.firstName + " " + this.lastName;};<br>
                 }<br>
                 </b></code>
               <h3>Using the prototype Property</h3>
               <code class="ruby"><b>
                 function person(first, last, age, eyecolor) {<br>
-                    this.firstName = first;<br>
-                    this.lastName = last;<br>
-                    this.age = age;<br>
-                    this.eyeColor = eyecolor;<br>
+                    &nbsp;&nbsp;&nbsp;this.firstName = first;<br>
+                    &nbsp;&nbsp;&nbsp;this.lastName = last;<br>
+                    &nbsp;&nbsp;&nbsp;this.age = age;<br>
+                    &nbsp;&nbsp;&nbsp;this.eyeColor = eyecolor;<br>
                 }<br>
                 person.prototype.nationality = "English";<br>
                 </b></code>
                 <h3>Using the prototype Method</h3>
               <code class="ruby"><b>
                 function person(first, last, age, eyecolor) {<br>
-                    this.firstName = first;<br>
-                    this.lastName = last;<br>
-                    this.age = age;<br>
-                    this.eyeColor = eyecolor;<br>
+                    &nbsp;&nbsp;&nbsp;this.firstName = first;<br>
+                    &nbsp;&nbsp;&nbsp;this.lastName = last;<br>
+                    &nbsp;&nbsp;&nbsp;this.age = age;<br>
+                    &nbsp;&nbsp;&nbsp;this.eyeColor = eyecolor;<br>
                 }<br>
                 person.prototype.name = function() {<br>
-                    return this.firstName + " " + this.lastName;<br>
+                    &nbsp;&nbsp;&nbsp;return this.firstName + " " + this.lastName;<br>
                 };<br>
                 </b></code>
           </section>
