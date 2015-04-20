@@ -45,34 +45,95 @@
           </div>
         <div id="index-post">
           <section>
-            <h2>Technical Blog: Ruby Doc vs JavaScript Doc</h2>
-            <p id="date">April 12, 2015</p>
+            <h2>Technical Blog: SQL Query Optimization</h2>
+            <p id="date">April 19, 2015</p>
               <p>
-                Both the Ruby and JavaScript doc are very dense and difficult to understand for a first time learner. However, as you go along and find things, you start to discover some solid ground.
-              </p>
-              <h3>Ruby Doc</h3>
-              <p>
-                The Ruby Doc was not like reading a book or magazine, it was a highly technical and dense document that was very intimidating. One of the hardest parts was getting over this. I would assume it's much like reading Shakespeare. The language is tough as first, but after a while, you start to figure out what world you are in. 
+                When working with big database you would want retrieve data efficiently and fast. Here are some SQL command techniques that might help you. 
               </p>
               <p>
-                What I found helpful was to make sure what version you're working with. When you are working with the latest version of Ruby, some of methods in the earlier versions of Ruby don't apply. When you search what you're looking for, you should start with the summary of its description followed by some examples. This helped me get my eyes used to the syntax examples that are given.
+                It is faster if you type the actual columns names instead of '*' in SELECT statement.
+                For example, instead of:
               </p>
+              <code><pre><b>
+                SELECT * FROM students;
+              </b></pre></code>
               <p>
-                I would highly recommend reading Maria Piper's blog post on how to read a Ruby Document and utilize it efficiently. You can find her post [*here*](http://mariabpiper.tumblr.com/post/116045895341/ruby-docs-for-newbs). 
+                try
               </p>
+              <code><pre><b>
+                SELECT id, first_name, last_name, age, subject FROM students;
+              </b></pre></code>
               <p>
-                Another thing I found helpful is to access Ruby Documentation descriptions with <code class="ruby"><b>ri</b></code> command from your terminal (this is also helpful if you find yourself with no internet connection).
+                Below are some examples with WHERE clause. Instead of:
               </p>
-              <h3>Javascript Doc</h3>
+              <code><pre><b>
+                SELECT id, first_name, age FROM students WHERE age != 10;
+              </b></pre></code>
               <p>
-                The Javascript document was a similar experience as far as the density and difficulty in reading the information. It's not, by any means, a casual read. One must be an active reading to fully understand the information. 
+                try
               </p>
+              <code><pre><b>
+                SELECT id, first_name, age FROM students WHERE age > 10;
+              </b></pre></code>
               <p>
-                However, I found the examples are easier to understand. Their detailed examples are more descriptive. This allows the reader to actually see what certain methods can do for you. 
+                Instead of:
               </p>
+              <code><pre><b>
+                SELECT id, first_name, age FROM students 
+                WHERE SUBSTR(first_name, 1, 3) = 'Jo';
+              </b></pre></code>
               <p>
-                Since I just was introduced to Javascript this week, I don't have the experience that I have with Ruby, so I can't get deeper into specifics. However, with the greater explanations, I think this is going to be a bit easier on my mind.  
+                try
               </p>
+              <code><pre><b>
+                SELECT id, first_name, age FROM students 
+                WHERE first_name LIKE 'Jo%';
+              </b></pre></code>
+              <p>
+                Instead of:
+              </p>
+              <code><pre><b>
+                SELECT id, first_name, age FROM students 
+                WHERE first_name = NVL (:name, first_name);
+              </b></pre></code>
+              <p>
+                try
+              </p>
+              <code><pre><b>
+                SELECT id, first_name, age FROM students 
+                WHERE first_name LIKE NVL (:name, '%');
+              </b></pre></code>
+              <p>
+                Instead of:
+              </p>
+              <code><pre><b>
+                SELECT product_id, product_name FROM products
+                WHERE unit_price >= MAX(unit_price) and unit_price <= MIN(unit_price);
+              </b></pre></code>
+              <p>
+                try
+              </p>
+              <code><pre><b>
+                SELECT product_id, product_name FROM products
+                WHERE unit_price BETWEEN MAX(unit_price) and MIN(unit_price);
+              </b></pre></code>
+              <p>
+                Instead of:
+              </p>
+              <code><pre><b>
+                SELECT id, name, salary FROM employee 
+                WHERE dept || location= 'ElectronicsBrooklyn';
+              </b></pre></code>
+              <p>
+                try
+              </p>
+              <code><pre><b>
+                SELECT id, name, salary FROM employee 
+                WHERE dept = 'Electronics' 
+                AND location = 'Brooklyn';
+              </b></pre></code>
+              &nbsp;
+              &nbsp;
           </section>
         </div>
         <div id="social">
